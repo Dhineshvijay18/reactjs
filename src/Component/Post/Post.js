@@ -10,7 +10,7 @@ class Post extends Component {
     };
 
  
-    }
+    
     render(){
         const posts = [...this.state.posts];
         posts[0].title = 'Modified post title1';
@@ -22,7 +22,7 @@ class Post extends Component {
             postTitle:'Modified Title',
             
         });
-        clickHandler() {
+       const clickHandler =() => {
             console.log('Dhinesh Babu');
             this.setState({
                 postTitle:'Dhinesh Babu',
@@ -33,7 +33,7 @@ class Post extends Component {
         return(
             <div>
                 <div>
-                    <button onClick = {()=>this.clickHandler()} className='text-1xl font-bold text-whit bg-green-500 px-5 py-5 rounded-3xl'
+                    <button onClick = {clickHandler} className='text-1xl font-bold text-whit bg-green-500 px-5 py-5 rounded-3xl'
                    
                     >Click Me!</button>
                 </div>
